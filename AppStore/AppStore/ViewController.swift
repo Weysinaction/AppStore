@@ -11,17 +11,9 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setupTabBarItem()
+        // Do any additional setup after loading the view.
     }
 
-    func setupTabBarItem() {
-        var tabBarItem = UITabBarItem()
-        tabBarItem = UITabBarItem(title: "Купить", image: UIImage(systemName: "laptopcomputer.and.iphone"), tag: 0)
-        tabBarItem.badgeColor = .lightGray
-        
-        self.tabBarItem = tabBarItem
-        self.view.backgroundColor = .black
-    }
+
 }
 
