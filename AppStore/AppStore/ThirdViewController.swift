@@ -40,6 +40,7 @@ final class ThirdViewController: UIViewController {
     private var firstGestureRecognizer = UITapGestureRecognizer()
     private var secondGestureRecognizer = UITapGestureRecognizer()
     private var thirdGestureRecognizer = UITapGestureRecognizer()
+    private let darkGrayBackgroundColor = UIColor(red: 35/255.0, green: 35/255.0, blue: 35/255.0, alpha: 1.00)
     
     //MARK: ViewCOntroller's methods
     override func viewDidLoad() {
@@ -66,7 +67,7 @@ final class ThirdViewController: UIViewController {
     }
     
     private func setupLabels() {
-        searchLabel.frame = CGRect(x: 10, y: 50, width: 100, height: 50)
+        searchLabel.frame = CGRect(x: 10, y: 50, width: 100, height: 38)
         searchLabel.font = UIFont.boldSystemFont(ofSize: 30.0)
         searchLabel.text = "Поиск"
         searchLabel.textColor = .white
@@ -172,7 +173,7 @@ final class ThirdViewController: UIViewController {
         self.view.addSubview(searchImageFour)
         
         firstImageView.frame = CGRect(x: 30, y: 210, width: 110, height: 110)
-        firstImageView.image = UIImage(named: "iu-23")
+        firstImageView.image = UIImage(named: "1")
         firstImageView.isUserInteractionEnabled = true
         firstImageView.tag = 0
         firstGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(sender:)))
@@ -180,7 +181,7 @@ final class ThirdViewController: UIViewController {
         self.view.addSubview(firstImageView)
         
         secondImageView.frame = CGRect(x: 190, y: 210, width: 110, height: 110)
-        secondImageView.image = UIImage(named: "iu-24")
+        secondImageView.image = UIImage(named: "2")
         secondImageView.isUserInteractionEnabled = true
         secondImageView.tag = 1
         secondGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(sender:)))
@@ -188,7 +189,7 @@ final class ThirdViewController: UIViewController {
         self.view.addSubview(secondImageView)
         
         thirdImageView.frame = CGRect(x: 350, y: 210 , width: 110, height: 110)
-        thirdImageView.image = UIImage(named: "iu-25")
+        thirdImageView.image = UIImage(named: "4")
         thirdImageView.isUserInteractionEnabled = true
         thirdImageView.tag = 2
         thirdGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(sender:)))
@@ -199,28 +200,30 @@ final class ThirdViewController: UIViewController {
     private func setupTextField() {
         searchTextField.frame = CGRect(x: 10, y: 100, width: 390, height: 38)
         searchTextField.layer.cornerRadius = 10
-        searchTextField.textColor = .darkGray
+        searchTextField.textColor = UIColor(red: 56.00, green: 56.00, blue: 56.00, alpha: 1.00)
         searchTextField.leftView = searchImageFive
         searchTextField.leftViewMode = .always
         searchTextField.placeholder = "Поиск по продуктам и магазинам"
-        searchTextField.backgroundColor = .white
+        searchTextField.text = " Поиск по продуктам и магазинам"
+        searchTextField.textColor = .lightGray
+        searchTextField.backgroundColor = darkGrayBackgroundColor
         self.view.addSubview(searchTextField)
     }
     
     private func setupViews() {
         firstItemView.frame = CGRect(x: 10, y: 200, width: 150, height: 200)
         firstItemView.layer.cornerRadius = 12
-        firstItemView.backgroundColor = .darkGray
+        firstItemView.backgroundColor = darkGrayBackgroundColor
         self.view.addSubview(firstItemView)
         
         secondItemView.frame = CGRect(x: 170, y: 200, width: 150, height: 200)
         secondItemView.layer.cornerRadius = 12
-        secondItemView.backgroundColor = .darkGray
+        secondItemView.backgroundColor = darkGrayBackgroundColor
         self.view.addSubview(secondItemView)
         
         thirdItemView.frame = CGRect(x: 330, y: 200, width: 150, height: 200)
         thirdItemView.layer.cornerRadius = 12
-        thirdItemView.backgroundColor = .darkGray
+        thirdItemView.backgroundColor = darkGrayBackgroundColor
         self.view.addSubview(thirdItemView)
     }
     
