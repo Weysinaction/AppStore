@@ -18,6 +18,7 @@
 		E02FEEEF269B953100E3C2E4 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02FEEEE269B953100E3C2E4 /* SecondViewController.swift */; };
 		E02FEEF1269B953D00E3C2E4 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02FEEF0269B953D00E3C2E4 /* ThirdViewController.swift */; };
 		E02FEEF3269B954900E3C2E4 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02FEEF2269B954900E3C2E4 /* FourthViewController.swift */; };
+		E02FEEF5269BBA1D00E3C2E4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02FEEF4269BBA1D00E3C2E4 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		E02FEEEE269B953100E3C2E4 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		E02FEEF0269B953D00E3C2E4 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		E02FEEF2269B954900E3C2E4 /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
+		E02FEEF4269BBA1D00E3C2E4 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				E02FEEC2269B91C200E3C2E4 /* ViewController.swift */,
 				E02FEEEE269B953100E3C2E4 /* SecondViewController.swift */,
 				E02FEEF0269B953D00E3C2E4 /* ThirdViewController.swift */,
+				E02FEEF4269BBA1D00E3C2E4 /* DetailViewController.swift */,
 				E02FEEF2269B954900E3C2E4 /* FourthViewController.swift */,
 				E02FEEC4269B91C200E3C2E4 /* Main.storyboard */,
 				E02FEEC7269B91C500E3C2E4 /* Assets.xcassets */,
@@ -273,6 +276,7 @@
 				E02FEEF1269B953D00E3C2E4 /* ThirdViewController.swift in Sources */,
 				E02FEEBF269B91C200E3C2E4 /* AppDelegate.swift in Sources */,
 				E02FEEC1269B91C200E3C2E4 /* SceneDelegate.swift in Sources */,
+				E02FEEF5269BBA1D00E3C2E4 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

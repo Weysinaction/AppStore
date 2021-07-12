@@ -7,14 +7,16 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+final class SecondViewController: UIViewController {
 
+    //MARK: ViewCOntroller's methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupTabBarItem()
     }
 
+    //MARK: private methods
     func setupTabBarItem() {
         var tabBarItem = UITabBarItem()
         tabBarItem = UITabBarItem(title: "Для вас", image: UIImage(systemName: "person.crop.circle"), tag: 1)

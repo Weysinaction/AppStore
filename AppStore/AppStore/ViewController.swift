@@ -7,15 +7,17 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
 
+    //MARK: ViewCOntroller's methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupTabBarItem()
     }
 
-    func setupTabBarItem() {
+    //MARK: private methods
+    private func setupTabBarItem() {
         var tabBarItem = UITabBarItem()
         tabBarItem = UITabBarItem(title: "Купить", image: UIImage(systemName: "laptopcomputer.and.iphone"), tag: 0)
         tabBarItem.badgeColor = .lightGray
