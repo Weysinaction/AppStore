@@ -34,7 +34,7 @@ final class ThirdViewController: UIViewController {
     private let searchImageFour = UIImageView()
     private let searchImageFive = UIImageView()
     private let dividerOne = UIView()
-    private let dividerTwo = UIView()
+    private let dividerTwoView = UIView()
     private let dividerThree = UIView()
     private let dividerFour = UIView()
     private var mainScrollView = UIScrollView()
