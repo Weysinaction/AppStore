@@ -37,6 +37,8 @@ final class ThirdViewController: UIViewController {
     private let dividerTwo = UIView()
     private let dividerThree = UIView()
     private let dividerFour = UIView()
+    private var mainScrollView = UIScrollView()
+    private var itemsArray: [(imageOne: UIImage, imageTwo: UIImage, imageThree: UIImage, mainTitle: String, subTitle: String, price: String)] = []
     private var firstGestureRecognizer = UITapGestureRecognizer()
     private var secondGestureRecognizer = UITapGestureRecognizer()
     private var thirdGestureRecognizer = UITapGestureRecognizer()
@@ -46,6 +48,16 @@ final class ThirdViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        configureView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    //MARK: private methods
+    private func configureView() {
+        initArrays()
         setupTabBarItem()
         setupViews()
         setupLabels()
@@ -53,9 +65,45 @@ final class ThirdViewController: UIViewController {
         setupImageViews()
         setupTextField()
         setupButtons()
+        setupScrollView()
+        self.title = "Поиск"
     }
-
-    //MARK: private methods
+    
+    //Заполняем массив информацией о товарах
+    private func initArrays() {
+        var imgOne = UIImage(named: "photo_1_1")
+        var imgTwo = UIImage(named: "photo_1_2")
+        var imgThree = UIImage(named: "photo_1_3")
+        guard imgOne != nil && imgTwo != nil && imgThree != nil else {
+            return
+        }
+        itemsArray.append((imageOne: imgOne!, imageTwo: imgTwo!, imageThree: imgThree!,
+                           mainTitle: "Чехол Incase Flat для MacBook Pro 16 дюймов",
+                           subTitle: "Чехол Incase Flat для MacBook Pro 16 дюймов",
+                           price: "2 990.00 руб."))
+        
+        imgOne = UIImage(named: "photo_2_1")
+        imgTwo = UIImage(named: "photo_2_2")
+        imgThree = UIImage(named: "photo_2_3")
+        guard imgOne != nil && imgTwo != nil && imgThree != nil else {
+            return
+        }
+        itemsArray.append((imageOne: imgOne!, imageTwo: imgTwo!, imageThree: imgThree!,
+                           mainTitle: "Кожаный чехол для MacBook Pro 16 дюймов, золотой",
+                           subTitle: "Кожаный чехол для MacBook Pro 16 дюймов",
+                           price: "3 990.00 руб."))
+        
+        imgOne = UIImage(named: "photo_3_1")
+        imgTwo = UIImage(named: "photo_3_2")
+        imgThree = UIImage(named: "photo_3_3")
+        guard imgOne != nil && imgTwo != nil && imgThree != nil else {
+            return
+        }
+        itemsArray.append((imageOne: imgOne!, imageTwo: imgTwo!, imageThree: imgThree!,
+                           mainTitle: "Спортивный ремешок Black Unity (для Apple Watch)",
+                           subTitle: "Спортивный ремешок Black Unity",
+                           price: "5 990.00 руб."))
+    }
     private func setupTabBarItem() {
         var tabBarItem = UITabBarItem()
         tabBarItem = UITabBarItem(title: "Поиск", image: UIImage(systemName: "magnifyingglass"), tag: 2)
@@ -109,24 +157,24 @@ final class ThirdViewController: UIViewController {
         labelCompare.text = "Сравните модели iPhone"
         self.view.addSubview(labelCompare)
         
-        firstItemLabel.frame = CGRect(x: 20, y: 330, width: 130, height: 60)
+        firstItemLabel.frame = CGRect(x: 10, y: 130, width: 130, height: 60)
         firstItemLabel.textColor = .white
         firstItemLabel.font = searchLabel.font.withSize(15)
-        firstItemLabel.text = "Чехол Incase Flat для MacBook Pro 16 дюймов"
+        firstItemLabel.text = itemsArray[0].mainTitle
         firstItemLabel.numberOfLines = 3
         self.view.addSubview(firstItemLabel)
         
-        secondItemLabel.frame = CGRect(x: 180, y: 330, width: 130, height: 60)
+        secondItemLabel.frame = CGRect(x: 170, y: 130, width: 130, height: 60)
         secondItemLabel.textColor = .white
         secondItemLabel.font = searchLabel.font.withSize(15)
-        secondItemLabel.text = "Спортивный ремешок Black Unity (для Apple Watch)"
+        secondItemLabel.text = itemsArray[1].mainTitle
         secondItemLabel.numberOfLines = 3
         self.view.addSubview(secondItemLabel)
         
-        thirdItemLabel.frame = CGRect(x: 340, y: 330, width: 130, height: 60)
+        thirdItemLabel.frame = CGRect(x: 330, y: 130, width: 130, height: 60)
         thirdItemLabel.textColor = .white
         thirdItemLabel.font = searchLabel.font.withSize(15)
-        thirdItemLabel.text = "Кожаный чехол для MacBook Pro 16 дюймов, золотой"
+        thirdItemLabel.text = itemsArray[2].mainTitle
         thirdItemLabel.numberOfLines = 3
         self.view.addSubview(thirdItemLabel)
     }
@@ -172,24 +220,23 @@ final class ThirdViewController: UIViewController {
         searchImageFive.image = UIImage(systemName: "magnifyingglass")
         self.view.addSubview(searchImageFour)
         
-        firstImageView.frame = CGRect(x: 30, y: 210, width: 110, height: 110)
-        firstImageView.image = UIImage(named: "1")
+        firstImageView.frame = CGRect(x: 20, y: 10, width: 110, height: 110)
+        firstImageView.image = itemsArray[0].imageOne
         firstImageView.isUserInteractionEnabled = true
         firstImageView.tag = 0
         firstGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(sender:)))
         firstImageView.addGestureRecognizer(firstGestureRecognizer)
-        self.view.addSubview(firstImageView)
         
-        secondImageView.frame = CGRect(x: 190, y: 210, width: 110, height: 110)
-        secondImageView.image = UIImage(named: "2")
+        secondImageView.frame = CGRect(x: 180, y: 10, width: 110, height: 110)
+        secondImageView.image = itemsArray[1].imageOne
         secondImageView.isUserInteractionEnabled = true
         secondImageView.tag = 1
         secondGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(sender:)))
         secondImageView.addGestureRecognizer(secondGestureRecognizer)
         self.view.addSubview(secondImageView)
         
-        thirdImageView.frame = CGRect(x: 350, y: 210 , width: 110, height: 110)
-        thirdImageView.image = UIImage(named: "4")
+        thirdImageView.frame = CGRect(x: 340, y: 10 , width: 110, height: 110)
+        thirdImageView.image = itemsArray[2].imageOne
         thirdImageView.isUserInteractionEnabled = true
         thirdImageView.tag = 2
         thirdGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(sender:)))
@@ -211,20 +258,20 @@ final class ThirdViewController: UIViewController {
     }
     
     private func setupViews() {
-        firstItemView.frame = CGRect(x: 10, y: 200, width: 150, height: 200)
+        firstItemView.frame = CGRect(x: 0, y: 0, width: 150, height: 200)
         firstItemView.layer.cornerRadius = 12
         firstItemView.backgroundColor = darkGrayBackgroundColor
-        self.view.addSubview(firstItemView)
+        //self.view.addSubview(firstItemView)
         
-        secondItemView.frame = CGRect(x: 170, y: 200, width: 150, height: 200)
+        secondItemView.frame = CGRect(x: 160, y: 0, width: 150, height: 200)
         secondItemView.layer.cornerRadius = 12
         secondItemView.backgroundColor = darkGrayBackgroundColor
-        self.view.addSubview(secondItemView)
+        //self.view.addSubview(secondItemView)
         
-        thirdItemView.frame = CGRect(x: 330, y: 200, width: 150, height: 200)
+        thirdItemView.frame = CGRect(x: 320, y: 0, width: 150, height: 200)
         thirdItemView.layer.cornerRadius = 12
         thirdItemView.backgroundColor = darkGrayBackgroundColor
-        self.view.addSubview(thirdItemView)
+        //self.view.addSubview(thirdItemView)
     }
     
     private func setupButtons() {
@@ -233,36 +280,38 @@ final class ThirdViewController: UIViewController {
         recentViewButton.setTitleColor(.systemBlue, for: .normal)
         self.view.addSubview(recentViewButton)
     }
+    
+    private func setupScrollView() {
+        mainScrollView.frame = CGRect(x: 10, y: 200, width: 390, height: 210)
+        mainScrollView.contentSize = CGSize(width: 500, height: 200)
+        mainScrollView.addSubview(firstItemView)
+        mainScrollView.addSubview(secondItemView)
+        mainScrollView.addSubview(thirdItemView)
+        mainScrollView.addSubview(firstImageView)
+        mainScrollView.addSubview(secondImageView)
+        mainScrollView.addSubview(thirdImageView)
+        mainScrollView.addSubview(firstItemLabel)
+        mainScrollView.addSubview(secondItemLabel)
+        mainScrollView.addSubview(thirdItemLabel)
+        
+        self.view.addSubview(mainScrollView)
+    }
     //MARK: selectors
     
     @objc func imageTapped(sender: UITapGestureRecognizer) {
         let vc = DetailViewController()
         switch sender.view?.tag {
         case 0:
-            if let image = firstImageView.image {
-                vc.image = image
-            }
-            if let string = firstItemLabel.text {
-                vc.inputText = string
-            }
+            vc.itemsTuple = self.itemsArray[0]
         case 1:
-            if let image = secondImageView.image {
-                vc.image = image
-            }
-            if let string = secondItemLabel.text {
-                vc.inputText = string
-            }
+            vc.itemsTuple = self.itemsArray[1]
         case 2:
-            if let image = thirdImageView.image {
-                vc.image = image
-            }
-            if let string = thirdItemLabel.text {
-                vc.inputText = string
-            }
+            vc.itemsTuple = self.itemsArray[2]
         default:
             break
         }
-        self.present(vc, animated: true, completion: nil)
+        //self.present(navVC, animated: true, completion: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
         
     }
 }
