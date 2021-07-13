@@ -18,11 +18,6 @@ final class SecondViewController: UIViewController {
 
     //MARK: private methods
     func setupTabBarItem() {
-        var tabBarItem = UITabBarItem()
-        tabBarItem = UITabBarItem(title: "Для вас", image: UIImage(systemName: "person.crop.circle"), tag: 1)
-        tabBarItem.badgeColor = .lightGray
-        
-        self.tabBarItem = tabBarItem
         self.view.backgroundColor = .black
     }
 }

@@ -76,8 +76,11 @@ final class DetailViewController: UIViewController {
         self.view.addSubview(addToCartButton)
     }
     private func configureNavBar() {
-        self.navigationController?.navigationBar.barTintColor = darkGrayBackgroundColor
+        self.navigationController?.navigationBar.barTintColor = .black
         self.navigationController?.setNavigationBarHidden(false, animated: true)
+        let barButtonItemOne = UIBarButtonItem(image: UIImage(systemName: "square.and.arrow.up"), style: .plain, target: self, action: nil)
+        let barButtonItemTwo = UIBarButtonItem(image: UIImage(systemName: "heart"), style: .plain, target: self, action: nil)
+        self.navigationItem.rightBarButtonItems = [barButtonItemTwo, barButtonItemOne]
     }
     private func setupImageViews() {
         firstImageView.frame = CGRect(x: 100, y: 10, width: 200, height: 200)
@@ -96,7 +99,7 @@ final class DetailViewController: UIViewController {
         
         shippingImageView.frame = CGRect(x: 20, y: 730, width: 20, height: 20)
         shippingImageView.image = UIImage(systemName: "cube.box")
-        shippingImageView.tintColor = .systemGreen
+        shippingImageView.tintColor = .darkGray
         self.view.addSubview(shippingImageView)
     }
     

@@ -9,15 +9,15 @@
 /* Begin PBXBuildFile section */
 		E02FEEBF269B91C200E3C2E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02FEEBE269B91C200E3C2E4 /* AppDelegate.swift */; };
 		E02FEEC1269B91C200E3C2E4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02FEEC0269B91C200E3C2E4 /* SceneDelegate.swift */; };
-		E02FEEC3269B91C200E3C2E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02FEEC2269B91C200E3C2E4 /* ViewController.swift */; };
+		E02FEEC3269B91C200E3C2E4 /* BuyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02FEEC2269B91C200E3C2E4 /* BuyViewController.swift */; };
 		E02FEEC6269B91C200E3C2E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E02FEEC4269B91C200E3C2E4 /* Main.storyboard */; };
 		E02FEEC8269B91C500E3C2E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E02FEEC7269B91C500E3C2E4 /* Assets.xcassets */; };
 		E02FEECB269B91C500E3C2E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E02FEEC9269B91C500E3C2E4 /* LaunchScreen.storyboard */; };
 		E02FEED6269B91C500E3C2E4 /* AppStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02FEED5269B91C500E3C2E4 /* AppStoreTests.swift */; };
 		E02FEEE1269B91C500E3C2E4 /* AppStoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02FEEE0269B91C500E3C2E4 /* AppStoreUITests.swift */; };
-		E02FEEEF269B953100E3C2E4 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02FEEEE269B953100E3C2E4 /* SecondViewController.swift */; };
-		E02FEEF1269B953D00E3C2E4 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02FEEF0269B953D00E3C2E4 /* ThirdViewController.swift */; };
-		E02FEEF3269B954900E3C2E4 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02FEEF2269B954900E3C2E4 /* FourthViewController.swift */; };
+		E02FEEEF269B953100E3C2E4 /* ForYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02FEEEE269B953100E3C2E4 /* ForYouViewController.swift */; };
+		E02FEEF1269B953D00E3C2E4 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02FEEF0269B953D00E3C2E4 /* SearchViewController.swift */; };
+		E02FEEF3269B954900E3C2E4 /* ShoppingCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02FEEF2269B954900E3C2E4 /* ShoppingCartViewController.swift */; };
 		E02FEEF5269BBA1D00E3C2E4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02FEEF4269BBA1D00E3C2E4 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,7 +42,7 @@
 		E02FEEBB269B91C200E3C2E4 /* AppStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E02FEEBE269B91C200E3C2E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E02FEEC0269B91C200E3C2E4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E02FEEC2269B91C200E3C2E4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E02FEEC2269B91C200E3C2E4 /* BuyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyViewController.swift; sourceTree = "<group>"; };
 		E02FEEC5269B91C200E3C2E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E02FEEC7269B91C500E3C2E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E02FEECA269B91C500E3C2E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,9 +53,9 @@
 		E02FEEDC269B91C500E3C2E4 /* AppStoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppStoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E02FEEE0269B91C500E3C2E4 /* AppStoreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreUITests.swift; sourceTree = "<group>"; };
 		E02FEEE2269B91C500E3C2E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E02FEEEE269B953100E3C2E4 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
-		E02FEEF0269B953D00E3C2E4 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
-		E02FEEF2269B954900E3C2E4 /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
+		E02FEEEE269B953100E3C2E4 /* ForYouViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForYouViewController.swift; sourceTree = "<group>"; };
+		E02FEEF0269B953D00E3C2E4 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		E02FEEF2269B954900E3C2E4 /* ShoppingCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartViewController.swift; sourceTree = "<group>"; };
 		E02FEEF4269BBA1D00E3C2E4 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,11 +109,11 @@
 			children = (
 				E02FEEBE269B91C200E3C2E4 /* AppDelegate.swift */,
 				E02FEEC0269B91C200E3C2E4 /* SceneDelegate.swift */,
-				E02FEEC2269B91C200E3C2E4 /* ViewController.swift */,
-				E02FEEEE269B953100E3C2E4 /* SecondViewController.swift */,
-				E02FEEF0269B953D00E3C2E4 /* ThirdViewController.swift */,
+				E02FEEC2269B91C200E3C2E4 /* BuyViewController.swift */,
+				E02FEEEE269B953100E3C2E4 /* ForYouViewController.swift */,
+				E02FEEF0269B953D00E3C2E4 /* SearchViewController.swift */,
 				E02FEEF4269BBA1D00E3C2E4 /* DetailViewController.swift */,
-				E02FEEF2269B954900E3C2E4 /* FourthViewController.swift */,
+				E02FEEF2269B954900E3C2E4 /* ShoppingCartViewController.swift */,
 				E02FEEC4269B91C200E3C2E4 /* Main.storyboard */,
 				E02FEEC7269B91C500E3C2E4 /* Assets.xcassets */,
 				E02FEEC9269B91C500E3C2E4 /* LaunchScreen.storyboard */,
@@ -270,10 +270,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E02FEEF3269B954900E3C2E4 /* FourthViewController.swift in Sources */,
-				E02FEEEF269B953100E3C2E4 /* SecondViewController.swift in Sources */,
-				E02FEEC3269B91C200E3C2E4 /* ViewController.swift in Sources */,
-				E02FEEF1269B953D00E3C2E4 /* ThirdViewController.swift in Sources */,
+				E02FEEF3269B954900E3C2E4 /* ShoppingCartViewController.swift in Sources */,
+				E02FEEEF269B953100E3C2E4 /* ForYouViewController.swift in Sources */,
+				E02FEEC3269B91C200E3C2E4 /* BuyViewController.swift in Sources */,
+				E02FEEF1269B953D00E3C2E4 /* SearchViewController.swift in Sources */,
 				E02FEEBF269B91C200E3C2E4 /* AppDelegate.swift in Sources */,
 				E02FEEC1269B91C200E3C2E4 /* SceneDelegate.swift in Sources */,
 				E02FEEF5269BBA1D00E3C2E4 /* DetailViewController.swift in Sources */,

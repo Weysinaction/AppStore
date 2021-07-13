@@ -52,7 +52,7 @@ final class ThirdViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     //MARK: private methods
@@ -66,7 +66,7 @@ final class ThirdViewController: UIViewController {
         setupTextField()
         setupButtons()
         setupScrollView()
-        self.title = "Поиск"
+        title = "Поиск"
     }
     
     //Заполняем массив информацией о товарах
@@ -105,13 +105,8 @@ final class ThirdViewController: UIViewController {
                            price: "5 990.00 руб."))
     }
     private func setupTabBarItem() {
-        var tabBarItem = UITabBarItem()
-        tabBarItem = UITabBarItem(title: "Поиск", image: UIImage(systemName: "magnifyingglass"), tag: 2)
-        tabBarItem.badgeColor = .lightGray
-        
-        self.navigationController?.navigationBar.backgroundColor = .black
-        self.tabBarItem = tabBarItem
-        self.view.backgroundColor = .black
+        navigationController?.navigationBar.backgroundColor = .black
+        view.backgroundColor = .black
     }
     
     private func setupLabels() {
@@ -119,106 +114,106 @@ final class ThirdViewController: UIViewController {
         searchLabel.font = UIFont.boldSystemFont(ofSize: 30.0)
         searchLabel.text = "Поиск"
         searchLabel.textColor = .white
-        self.view.addSubview(searchLabel)
+        view.addSubview(searchLabel)
         
         recentViewedLabel.frame = CGRect(x: 10, y: 150, width: 350, height: 50)
         recentViewedLabel.font = UIFont.boldSystemFont(ofSize: 25.0)
         recentViewedLabel.textColor = .white
         recentViewedLabel.text = "Недавно просмотренные"
-        self.view.addSubview(recentViewedLabel)
+        view.addSubview(recentViewedLabel)
         
         requestVariablesLabel.frame = CGRect(x: 10, y: 500, width: 300, height: 50)
         requestVariablesLabel.font = UIFont.boldSystemFont(ofSize: 25.0)
         requestVariablesLabel.textColor = .white
         requestVariablesLabel.text = "Варианты запросов"
-        self.view.addSubview(requestVariablesLabel)
+        view.addSubview(requestVariablesLabel)
         
         airPodsLabel.frame = CGRect(x: 70, y: 550, width: 300, height: 50)
         airPodsLabel.font = searchLabel.font.withSize(20)
         airPodsLabel.textColor = .white
         airPodsLabel.text = "AirPods"
-        self.view.addSubview(airPodsLabel)
+        view.addSubview(airPodsLabel)
         
         appleCareLabel.frame = CGRect(x: 70, y: 600, width: 300, height: 50)
         appleCareLabel.font = searchLabel.font.withSize(20)
         appleCareLabel.textColor = .white
         appleCareLabel.text = "AppleCare"
-        self.view.addSubview(appleCareLabel)
+        view.addSubview(appleCareLabel)
         
         beatsLabel.frame = CGRect(x: 70, y: 650, width: 300, height: 50)
         beatsLabel.font = searchLabel.font.withSize(20)
         beatsLabel.textColor = .white
         beatsLabel.text = "Beats"
-        self.view.addSubview(beatsLabel)
+        view.addSubview(beatsLabel)
         
         labelCompare.frame = CGRect(x: 70, y: 700, width: 300, height: 50)
         labelCompare.font = searchLabel.font.withSize(20)
         labelCompare.textColor = .white
         labelCompare.text = "Сравните модели iPhone"
-        self.view.addSubview(labelCompare)
+        view.addSubview(labelCompare)
         
         firstItemLabel.frame = CGRect(x: 10, y: 130, width: 130, height: 60)
         firstItemLabel.textColor = .white
         firstItemLabel.font = searchLabel.font.withSize(15)
         firstItemLabel.text = itemsArray[0].mainTitle
         firstItemLabel.numberOfLines = 3
-        self.view.addSubview(firstItemLabel)
+        view.addSubview(firstItemLabel)
         
         secondItemLabel.frame = CGRect(x: 170, y: 130, width: 130, height: 60)
         secondItemLabel.textColor = .white
         secondItemLabel.font = searchLabel.font.withSize(15)
         secondItemLabel.text = itemsArray[1].mainTitle
         secondItemLabel.numberOfLines = 3
-        self.view.addSubview(secondItemLabel)
+        view.addSubview(secondItemLabel)
         
         thirdItemLabel.frame = CGRect(x: 330, y: 130, width: 130, height: 60)
         thirdItemLabel.textColor = .white
         thirdItemLabel.font = searchLabel.font.withSize(15)
         thirdItemLabel.text = itemsArray[2].mainTitle
         thirdItemLabel.numberOfLines = 3
-        self.view.addSubview(thirdItemLabel)
+        view.addSubview(thirdItemLabel)
     }
     
     private func setupDividers() {
         dividerOne.frame = CGRect(x: 10, y: 600, width: 390, height: 2)
         dividerOne.backgroundColor = .separator
-        self.view.addSubview(dividerOne)
+        view.addSubview(dividerOne)
         
         dividerTwo.frame = CGRect(x: 10, y: 650, width: 390, height: 2)
         dividerTwo.backgroundColor = .separator
-        self.view.addSubview(dividerTwo)
+        view.addSubview(dividerTwo)
         
         dividerThree.frame = CGRect(x: 10, y: 700, width: 390, height: 2)
         dividerThree.backgroundColor = .separator
-        self.view.addSubview(dividerThree)
+        view.addSubview(dividerThree)
         
         dividerFour.frame = CGRect(x: 10, y: 750, width: 390, height: 2)
         dividerFour.backgroundColor = .separator
-        self.view.addSubview(dividerFour)
+        view.addSubview(dividerFour)
     }
     
     private func setupImageViews() {
         searchImageOne.frame = CGRect(x: 25, y: 565, width: 20, height: 20)
         searchImageOne.tintColor = .lightGray
         searchImageOne.image = UIImage(systemName: "magnifyingglass")
-        self.view.addSubview(searchImageOne)
+        view.addSubview(searchImageOne)
         
         searchImageTwo.frame = CGRect(x: 25, y: 615, width: 20, height: 20)
         searchImageTwo.tintColor = .lightGray
         searchImageTwo.image = UIImage(systemName: "magnifyingglass")
-        self.view.addSubview(searchImageTwo)
+        view.addSubview(searchImageTwo)
         
         searchImageThree.frame = CGRect(x: 25, y: 665, width: 20, height: 20)
         searchImageThree.tintColor = .lightGray
         searchImageThree.image = UIImage(systemName: "magnifyingglass")
-        self.view.addSubview(searchImageThree)
+        view.addSubview(searchImageThree)
         
         searchImageFour.frame = CGRect(x: 25, y: 715, width: 20, height: 20)
         searchImageFour.tintColor = .lightGray
         searchImageFour.image = UIImage(systemName: "magnifyingglass")
         searchImageFive.tintColor = .lightGray
         searchImageFive.image = UIImage(systemName: "magnifyingglass")
-        self.view.addSubview(searchImageFour)
+        view.addSubview(searchImageFour)
         
         firstImageView.frame = CGRect(x: 20, y: 10, width: 110, height: 110)
         firstImageView.image = itemsArray[0].imageOne
@@ -233,7 +228,7 @@ final class ThirdViewController: UIViewController {
         secondImageView.tag = 1
         secondGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(sender:)))
         secondImageView.addGestureRecognizer(secondGestureRecognizer)
-        self.view.addSubview(secondImageView)
+        view.addSubview(secondImageView)
         
         thirdImageView.frame = CGRect(x: 340, y: 10 , width: 110, height: 110)
         thirdImageView.image = itemsArray[2].imageOne
@@ -241,7 +236,7 @@ final class ThirdViewController: UIViewController {
         thirdImageView.tag = 2
         thirdGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(sender:)))
         thirdImageView.addGestureRecognizer(thirdGestureRecognizer)
-        self.view.addSubview(thirdImageView)
+        view.addSubview(thirdImageView)
     }
     
     private func setupTextField() {
@@ -254,7 +249,7 @@ final class ThirdViewController: UIViewController {
         searchTextField.text = " Поиск по продуктам и магазинам"
         searchTextField.textColor = .lightGray
         searchTextField.backgroundColor = darkGrayBackgroundColor
-        self.view.addSubview(searchTextField)
+        view.addSubview(searchTextField)
     }
     
     private func setupViews() {
@@ -278,7 +273,7 @@ final class ThirdViewController: UIViewController {
         recentViewButton.frame = CGRect(x: 330, y: 150, width: 80, height: 50)
         recentViewButton.setTitle("Очистить", for: .normal)
         recentViewButton.setTitleColor(.systemBlue, for: .normal)
-        self.view.addSubview(recentViewButton)
+        view.addSubview(recentViewButton)
     }
     
     private func setupScrollView() {
@@ -294,24 +289,16 @@ final class ThirdViewController: UIViewController {
         mainScrollView.addSubview(secondItemLabel)
         mainScrollView.addSubview(thirdItemLabel)
         
-        self.view.addSubview(mainScrollView)
+        view.addSubview(mainScrollView)
     }
     //MARK: selectors
     
     @objc func imageTapped(sender: UITapGestureRecognizer) {
         let vc = DetailViewController()
-        switch sender.view?.tag {
-        case 0:
-            vc.itemsTuple = self.itemsArray[0]
-        case 1:
-            vc.itemsTuple = self.itemsArray[1]
-        case 2:
-            vc.itemsTuple = self.itemsArray[2]
-        default:
-            break
+        if let index = sender.view?.tag {
+            vc.itemsTuple = itemsArray[index]
         }
-        //self.present(navVC, animated: true, completion: nil)
-        self.navigationController?.pushViewController(vc, animated: true)
+        navigationController?.pushViewController(vc, animated: true)
         
     }
 }
