@@ -1,13 +1,13 @@
 //
-//  ViewController.swift
+//  FourthViewController.swift
 //  AppStore
 //
-//  Created by Владислав Лазарев on 11.07.2021.
+//  Created by Владислав Лазарев on 12.07.2021.
 //
 
 import UIKit
 
-final class ViewController: UIViewController {
+final class FourthViewController: UIViewController {
 
     //MARK: ViewCOntroller's methods
     override func viewDidLoad() {
@@ -15,15 +15,14 @@ final class ViewController: UIViewController {
         
         setupTabBarItem()
     }
-
+    
     //MARK: private methods
     private func setupTabBarItem() {
         var tabBarItem = UITabBarItem()
-        tabBarItem = UITabBarItem(title: "Купить", image: UIImage(systemName: "laptopcomputer.and.iphone"), tag: 0)
+        tabBarItem = UITabBarItem(title: "Корзина", image: UIImage(systemName: "bag"), tag: 3)
         tabBarItem.badgeColor = .lightGray
         
         self.tabBarItem = tabBarItem
         self.view.backgroundColor = .black
     }
 }
-
