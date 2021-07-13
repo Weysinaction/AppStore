@@ -71,38 +71,41 @@ final class ThirdViewController: UIViewController {
     
     //Заполняем массив информацией о товарах
     private func initDataSource() {
-        if let imgOne = UIImage(named: "photo_1_1") {
-            if let imgTwo = UIImage(named: "photo_1_2") {
-                if let imgThree = UIImage(named: "photo_1_3") {
-                    items.append((imageOne: imgOne, imageTwo: imgTwo, imageThree: imgThree,
-                                       mainTitle: "Чехол Incase Flat для MacBook Pro 16 дюймов",
-                                       subTitle: "Чехол Incase Flat для MacBook Pro 16 дюймов",
-                                       price: "2 990.00 руб."))
-                }
-            }
-        }
+        var imgItemOne = UIImage(named: "photo_1_1")
+        var imgItemTwo = UIImage(named: "photo_1_2")
+        var imgItemThree = UIImage(named: "photo_1_3")
         
-        if let imgOne = UIImage(named: "photo_2_1") {
-            if let imgTwo = UIImage(named: "photo_2_2") {
-                if let imgThree = UIImage(named: "photo_2_3") {
-                    items.append((imageOne: imgOne, imageTwo: imgTwo, imageThree: imgThree,
-                                       mainTitle: "Кожаный чехол для MacBook Pro 16 дюймов, золотой",
-                                       subTitle: "Кожаный чехол для MacBook Pro 16 дюймов",
-                                       price: "3 990.00 руб."))
-                }
-            }
+        guard let imgOne = imgItemOne, let imgTwo = imgItemTwo, let imgThree = imgItemThree else {
+            return
         }
+        items.append((imageOne: imgOne, imageTwo: imgTwo, imageThree: imgThree,
+                           mainTitle: "Чехол Incase Flat для MacBook Pro 16 дюймов",
+                           subTitle: "Чехол Incase Flat для MacBook Pro 16 дюймов",
+                           price: "2 990.00 руб."))
+        
+        imgItemOne = UIImage(named: "photo_2_1")
+        imgItemTwo = UIImage(named: "photo_2_2")
+        imgItemThree = UIImage(named: "photo_2_3")
+        
+        guard let imgOne = imgItemOne, let imgTwo = imgItemTwo, let imgThree = imgItemThree else {
+            return
+        }
+        items.append((imageOne: imgOne, imageTwo: imgTwo, imageThree: imgThree,
+                           mainTitle: "Кожаный чехол для MacBook Pro 16 дюймов, золотой",
+                           subTitle: "Кожаный чехол для MacBook Pro 16 дюймов",
+                           price: "3 990.00 руб."))
      
-        if let imgOne = UIImage(named: "photo_3_1") {
-            if let imgTwo = UIImage(named: "photo_3_2") {
-                if let imgThree = UIImage(named: "photo_3_3") {
-                    items.append((imageOne: imgOne, imageTwo: imgTwo, imageThree: imgThree,
-                                       mainTitle: "Спортивный ремешок Black Unity (для Apple Watch)",
-                                       subTitle: "Спортивный ремешок Black Unity",
-                                       price: "5 990.00 руб."))
-                }
-            }
+        imgItemOne = UIImage(named: "photo_3_1")
+        imgItemTwo = UIImage(named: "photo_3_2")
+        imgItemThree = UIImage(named: "photo_3_3")
+        
+        guard let imgOne = imgItemOne, let imgTwo = imgItemTwo, let imgThree = imgItemThree else {
+            return
         }
+        items.append((imageOne: imgOne, imageTwo: imgTwo, imageThree: imgThree,
+                           mainTitle: "Спортивный ремешок Black Unity (для Apple Watch)",
+                           subTitle: "Спортивный ремешок Black Unity",
+                           price: "5 990.00 руб."))
         
     }
     private func setupTabBarItem() {
