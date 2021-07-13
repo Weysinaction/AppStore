@@ -19,11 +19,30 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _ = (scene as? UIWindowScene) else { return }
         
         let viewController = ViewController()
+        var tabBarItem = UITabBarItem()
+        tabBarItem = UITabBarItem(title: "Купить", image: UIImage(systemName: "laptopcomputer.and.iphone"), tag: 0)
+        tabBarItem.badgeColor = .lightGray
+        viewController.tabBarItem = tabBarItem
+        
         let secondViewController = SecondViewController()
+        tabBarItem = UITabBarItem(title: "Для вас", image: UIImage(systemName: "person.crop.circle"), tag: 1)
+        tabBarItem.badgeColor = .lightGray
+        secondViewController.tabBarItem = tabBarItem
+        
         let thirdViewController = ThirdViewController()
+        tabBarItem = UITabBarItem(title: "Поиск", image: UIImage(systemName: "magnifyingglass"), tag: 2)
+        tabBarItem.badgeColor = .lightGray
+        thirdViewController.tabBarItem = tabBarItem
+    
         let fourthViewController = FourthViewController()
+        tabBarItem = UITabBarItem(title: "Корзина", image: UIImage(systemName: "bag"), tag: 3)
+        tabBarItem.badgeColor = .lightGray
+        fourthViewController.tabBarItem = tabBarItem
+        
+        let thirdNavViewController = UINavigationController(rootViewController: thirdViewController)
         let tabBarController = UITabBarController()
-        tabBarController.setViewControllers([viewController, secondViewController, thirdViewController, fourthViewController], animated: true)
+        tabBarController.tabBar.barTintColor = .black
+        tabBarController.setViewControllers([viewController, secondViewController, thirdNavViewController, fourthViewController], animated: true)
         
         self.window?.rootViewController = tabBarController
         self.window?.makeKeyAndVisible()
