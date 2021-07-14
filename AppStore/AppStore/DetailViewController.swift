@@ -10,13 +10,16 @@ import UIKit
 final class DetailViewController: UIViewController {
 
     //MARK: public properties
-    var itemsTuple: (imageOne: UIImage, imageTwo: UIImage, imageThree: UIImage, mainTitle: String, subTitle: String, price: String)? = nil
+    var itemsTuple: (imageOne: UIImage, imageTwo: UIImage, imageThree: UIImage, mainTitle: String, subTitle: String, price: String, tag: Int)? = nil
     
     //MARK: private properties
     private let imageView = UIImageView()
     private let firstImageView = UIImageView()
     private let secondImageView = UIImageView()
     private let thirdImageView = UIImageView()
+    private var firstGestureRecognizer = UITapGestureRecognizer()
+    private var secondGestureRecognizer = UITapGestureRecognizer()
+    private var thirdGestureRecognizer = UITapGestureRecognizer()
     private let headerLabel = UILabel()
     private let priceLabel = UILabel()
     private let descriptionLabel = UILabel()
@@ -85,12 +88,21 @@ final class DetailViewController: UIViewController {
     private func setupImageViews() {
         firstImageView.frame = CGRect(x: 100, y: 10, width: 200, height: 200)
         firstImageView.image = itemsTuple?.imageOne
+        firstImageView.isUserInteractionEnabled = true
+        firstGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
+        firstImageView.addGestureRecognizer(firstGestureRecognizer)
         
         secondImageView.frame = CGRect(x: 500, y: 10, width: 200, height: 200)
         secondImageView.image = itemsTuple?.imageTwo
+        secondImageView.isUserInteractionEnabled = true
+        secondGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
+        secondImageView.addGestureRecognizer(secondGestureRecognizer)
         
         thirdImageView.frame = CGRect(x: 900, y: 10 , width: 200, height: 200)
         thirdImageView.image = itemsTuple?.imageThree
+        thirdImageView.isUserInteractionEnabled = true
+        thirdGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
+        thirdImageView.addGestureRecognizer(thirdGestureRecognizer)
         
         comparableImageView.frame = CGRect(x: 30, y: 585, width: 20, height: 20)
         comparableImageView.image = UIImage(named: "checked")
@@ -163,7 +175,12 @@ final class DetailViewController: UIViewController {
         thirdShippingLabel.font = descriptionLabel.font.withSize(14)
         thirdShippingLabel.textColor = .systemBlue
         self.view.addSubview(thirdShippingLabel)
-        
-        
+    }
+    
+    //MARK: selectors
+    @objc func imageTapped() {
+        let webViewController = WebViewViewController()
+        webViewController.tag = itemsTuple?.tag ?? 0
+        present(webViewController, animated: true)
     }
 }
