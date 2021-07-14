@@ -19,6 +19,7 @@
 		E02FEEF1269B953D00E3C2E4 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02FEEF0269B953D00E3C2E4 /* SearchViewController.swift */; };
 		E02FEEF3269B954900E3C2E4 /* ShoppingCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02FEEF2269B954900E3C2E4 /* ShoppingCartViewController.swift */; };
 		E02FEEF5269BBA1D00E3C2E4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02FEEF4269BBA1D00E3C2E4 /* DetailViewController.swift */; };
+		E02FEEF7269DEB1900E3C2E4 /* WebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02FEEF6269DEB1900E3C2E4 /* WebViewViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		E02FEEF0269B953D00E3C2E4 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		E02FEEF2269B954900E3C2E4 /* ShoppingCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartViewController.swift; sourceTree = "<group>"; };
 		E02FEEF4269BBA1D00E3C2E4 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		E02FEEF6269DEB1900E3C2E4 /* WebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				E02FEEC2269B91C200E3C2E4 /* BuyViewController.swift */,
 				E02FEEEE269B953100E3C2E4 /* ForYouViewController.swift */,
 				E02FEEF0269B953D00E3C2E4 /* SearchViewController.swift */,
+				E02FEEF6269DEB1900E3C2E4 /* WebViewViewController.swift */,
 				E02FEEF4269BBA1D00E3C2E4 /* DetailViewController.swift */,
 				E02FEEF2269B954900E3C2E4 /* ShoppingCartViewController.swift */,
 				E02FEEC4269B91C200E3C2E4 /* Main.storyboard */,
@@ -276,6 +279,7 @@
 				E02FEEF1269B953D00E3C2E4 /* SearchViewController.swift in Sources */,
 				E02FEEBF269B91C200E3C2E4 /* AppDelegate.swift in Sources */,
 				E02FEEC1269B91C200E3C2E4 /* SceneDelegate.swift in Sources */,
+				E02FEEF7269DEB1900E3C2E4 /* WebViewViewController.swift in Sources */,
 				E02FEEF5269BBA1D00E3C2E4 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
