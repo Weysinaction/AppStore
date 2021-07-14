@@ -89,19 +89,19 @@ final class DetailViewController: UIViewController {
         firstImageView.frame = CGRect(x: 100, y: 10, width: 200, height: 200)
         firstImageView.image = itemsTuple?.imageOne
         firstImageView.isUserInteractionEnabled = true
-        firstGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(sender:)))
+        firstGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
         firstImageView.addGestureRecognizer(firstGestureRecognizer)
         
         secondImageView.frame = CGRect(x: 500, y: 10, width: 200, height: 200)
         secondImageView.image = itemsTuple?.imageTwo
         secondImageView.isUserInteractionEnabled = true
-        secondGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(sender:)))
+        secondGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
         secondImageView.addGestureRecognizer(secondGestureRecognizer)
         
         thirdImageView.frame = CGRect(x: 900, y: 10 , width: 200, height: 200)
         thirdImageView.image = itemsTuple?.imageThree
         thirdImageView.isUserInteractionEnabled = true
-        thirdGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(sender:)))
+        thirdGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
         thirdImageView.addGestureRecognizer(thirdGestureRecognizer)
         
         comparableImageView.frame = CGRect(x: 30, y: 585, width: 20, height: 20)
@@ -178,9 +178,9 @@ final class DetailViewController: UIViewController {
     }
     
     //MARK: selectors
-    @objc func imageTapped(sender: UITapGestureRecognizer) {
+    @objc func imageTapped() {
         let webViewController = WebViewViewController()
         webViewController.tag = itemsTuple?.tag ?? 0
-        present(webViewController, animated: true, completion: nil)
+        present(webViewController, animated: true)
     }
 }
