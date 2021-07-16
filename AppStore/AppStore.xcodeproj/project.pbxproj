@@ -20,6 +20,9 @@
 		E02FEEF3269B954900E3C2E4 /* ShoppingCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02FEEF2269B954900E3C2E4 /* ShoppingCartViewController.swift */; };
 		E02FEEF5269BBA1D00E3C2E4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02FEEF4269BBA1D00E3C2E4 /* DetailViewController.swift */; };
 		E02FEEF7269DEB1900E3C2E4 /* WebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02FEEF6269DEB1900E3C2E4 /* WebViewViewController.swift */; };
+		E02FEEF926A067DC00E3C2E4 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02FEEF826A067DB00E3C2E4 /* PageViewController.swift */; };
+		E02FEEFB26A0682A00E3C2E4 /* SinglePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02FEEFA26A0682A00E3C2E4 /* SinglePageViewController.swift */; };
+		E02FEEFD26A070C700E3C2E4 /* SinglePageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02FEEFC26A070C700E3C2E4 /* SinglePageHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,9 @@
 		E02FEEF2269B954900E3C2E4 /* ShoppingCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartViewController.swift; sourceTree = "<group>"; };
 		E02FEEF4269BBA1D00E3C2E4 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		E02FEEF6269DEB1900E3C2E4 /* WebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewViewController.swift; sourceTree = "<group>"; };
+		E02FEEF826A067DB00E3C2E4 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		E02FEEFA26A0682A00E3C2E4 /* SinglePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePageViewController.swift; sourceTree = "<group>"; };
+		E02FEEFC26A070C700E3C2E4 /* SinglePageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePageHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +119,9 @@
 				E02FEEC0269B91C200E3C2E4 /* SceneDelegate.swift */,
 				E02FEEC2269B91C200E3C2E4 /* BuyViewController.swift */,
 				E02FEEEE269B953100E3C2E4 /* ForYouViewController.swift */,
+				E02FEEF826A067DB00E3C2E4 /* PageViewController.swift */,
+				E02FEEFA26A0682A00E3C2E4 /* SinglePageViewController.swift */,
+				E02FEEFC26A070C700E3C2E4 /* SinglePageHelper.swift */,
 				E02FEEF0269B953D00E3C2E4 /* SearchViewController.swift */,
 				E02FEEF6269DEB1900E3C2E4 /* WebViewViewController.swift */,
 				E02FEEF4269BBA1D00E3C2E4 /* DetailViewController.swift */,
@@ -274,11 +283,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E02FEEF3269B954900E3C2E4 /* ShoppingCartViewController.swift in Sources */,
+				E02FEEFB26A0682A00E3C2E4 /* SinglePageViewController.swift in Sources */,
 				E02FEEEF269B953100E3C2E4 /* ForYouViewController.swift in Sources */,
 				E02FEEC3269B91C200E3C2E4 /* BuyViewController.swift in Sources */,
 				E02FEEF1269B953D00E3C2E4 /* SearchViewController.swift in Sources */,
+				E02FEEFD26A070C700E3C2E4 /* SinglePageHelper.swift in Sources */,
 				E02FEEBF269B91C200E3C2E4 /* AppDelegate.swift in Sources */,
 				E02FEEC1269B91C200E3C2E4 /* SceneDelegate.swift in Sources */,
+				E02FEEF926A067DC00E3C2E4 /* PageViewController.swift in Sources */,
 				E02FEEF7269DEB1900E3C2E4 /* WebViewViewController.swift in Sources */,
 				E02FEEF5269BBA1D00E3C2E4 /* DetailViewController.swift in Sources */,
 			);
